@@ -127,28 +127,6 @@ public class MainActivity extends Activity {
 
         listView.setAdapter(adapter);
         db.close();
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//                int itemPosition = position;
-//
-//
-//                String itemValue = listView.getItemAtPosition(position).toString();
-//
-//                if (itemPosition == 0) {
-//
-////
-//                }
-//                // Show Alert *Debug*
-//               // Toast.makeText(getApplicationContext(),
-//               //         "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
-//               //         .show();
-//
-//            }
-//
-//        });
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
