@@ -99,11 +99,11 @@ public class MainActivity extends Activity {
         FormatEmail();
         String newString = Arrays.toString(log);
 
-        String FilterNull = newString.replace(", null", "");
-        String FilterMisc = FilterNull.replace("[", "");
-        String FilterComma = FilterMisc.replace("]", "");
-        String FilterFinal = FilterComma.replace(",", "");
-        i.putExtra(Intent.EXTRA_TEXT, FilterFinal);
+        String FilterA = newString.replace(", null", "");
+        String FilterB = FilterA.replace("[", "");
+        String FilterC = FilterB.replace("]", "");
+        String FilterD = FilterC.replace(",", "");
+        i.putExtra(Intent.EXTRA_TEXT, FilterD);
 
         try {
             startActivity(Intent.createChooser(i, "Send mail..."));

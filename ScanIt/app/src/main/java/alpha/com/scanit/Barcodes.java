@@ -35,12 +35,12 @@ public class Barcodes {
         this._id = id;
     }
 
-    // getting name
+    // getting Barcode
     public String getBarcode() {
         return this._Barcode;
     }
 
-    // setting name
+    // setting Barcode
     public void setBarcode(String Barcode) {
         this._Barcode = Barcode;
     }
