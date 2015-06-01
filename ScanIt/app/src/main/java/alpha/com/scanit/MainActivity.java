@@ -14,29 +14,26 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.alpha.ZXing.android.IntentIntegrator;
 import com.alpha.ZXing.android.IntentResult;
-
 import java.util.Arrays;
 import java.util.List;
 
 
 public class MainActivity extends Activity {
-    ListView listView;
 
-
-    // private String Results;
+    // private Strings
     private String[] log = new String[100];
     private TextView formatTxt, contentTxt;
+    ListView listView;
 
     //String TAG = "MAKE_BARCODES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         CreateListView();
 
         Button scanBtn = (Button) findViewById(R.id.scan_button);
@@ -80,9 +77,9 @@ public class MainActivity extends Activity {
 
         int i = 0;
         for (Barcodes cn : Barcodes) {
-            String Format = cn.getBarcode();
-            String X = Format.substring(0, 2) + " " + Format.substring(2, 5) + " " + Format.substring(5, 8) + " " + Format.substring(8, 10) + " " + Format.substring(10, 14) + " " + Format.substring(14, 18);
-            log[i] = "\n" + X + " / " + cn.getCompany();
+            String bar = cn.getBarcode();
+            String Output = bar.substring(0, 2) + " " + bar.substring(2, 5) + " " + bar.substring(5, 8) + " " + bar.substring(8, 10) + " " + bar.substring(10, 14) + " " + bar.substring(14, 18);
+            log[i] = "\n" + Output + " / " + cn.getCompany();
             i++;
         }
 
@@ -98,7 +95,6 @@ public class MainActivity extends Activity {
 
         FormatEmail();
         String newString = Arrays.toString(log);
-
         String FilterA = newString.replace(", null", "");
         String FilterB = FilterA.replace("[", "");
         String FilterC = FilterB.replace("]", "");

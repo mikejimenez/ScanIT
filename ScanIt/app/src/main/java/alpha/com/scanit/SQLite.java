@@ -2,7 +2,6 @@ package alpha.com.scanit;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -10,17 +9,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
-
 public class SQLite extends SQLiteOpenHelper {
 
     // All Static variables
-    // Database Version
+
+    // Database Variables
     private static final int DATABASE_VERSION = 1;
-    // Database Name
     private static final String DATABASE_NAME = "BCData";
-    // Contacts table name
     private static final String TABLE_NAME = "Barcodes";
-    // Contacts Table Columns names
     private static final String KEY_ID = "_id";
     private static final String KEY_NAME = "Barcode";
     private static final String KEY_Barcode = "Company";
@@ -59,11 +55,12 @@ public class SQLite extends SQLiteOpenHelper {
      * Create, Read, Update, Delete Operations
      */
 
-//    // Adding new barcode
+    // Adding new barcode
     void addBarcodes(Barcodes Barcodes) {
-        SQLiteDatabase db = this.getWritableDatabase();
 
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
+
         values.put(KEY_NAME, Barcodes.getBarcode()); // Barcode
         values.put(KEY_Barcode, Barcodes.getCompany()); // Company
 
@@ -83,18 +80,17 @@ public class SQLite extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
-        Barcodes Barcodes = new Barcodes(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2));
+        Barcodes Barcodes = new Barcodes(Integer.parseInt(cursor.getString(0)), cursor.getString(1), cursor.getString(2));
 
         return Barcodes;
     }
-//
-//    // Getting All Barcodes
+
+    // Getting All Barcodes
 public List<Barcodes> getBarCodes() {
+
     List<Barcodes> BarcodesList = new ArrayList<>();
     // Select All Query
     String selectQuery = "SELECT  * FROM " + TABLE_NAME;
-
     SQLiteDatabase db = this.getWritableDatabase();
     Cursor cursor = db.rawQuery(selectQuery, null);
 

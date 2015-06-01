@@ -1,7 +1,5 @@
 package alpha.com.scanit;
 
-import android.text.Editable;
-
 public class Barcodes {
 
     //private variables
