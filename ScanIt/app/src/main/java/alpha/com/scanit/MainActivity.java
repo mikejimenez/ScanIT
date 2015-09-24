@@ -16,8 +16,10 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.alpha.ZXing.android.IntentIntegrator;
 import com.alpha.ZXing.android.IntentResult;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,7 +28,6 @@ public class MainActivity extends Activity {
 
     // private Strings
     private String[] log = new String[100];
-    public Boolean Express = false;
     private TextView formatTxt, contentTxt, CounterTxt;
     ListView listView;
     private Integer Counter = 0;
@@ -90,8 +91,7 @@ public class MainActivity extends Activity {
                 String Output = bar.substring(0, 2) + " " + bar.substring(2, 5) + " " + bar.substring(5, 8) + " " + bar.substring(8, 10) + " " + bar.substring(10, 14) + " " + bar.substring(14, 18);
                 log[i] = "\n" + Output + " / " + cn.getCompany();
                 i++;
-            }
-            else {
+            } else {
                 String Result = FormatString(bar);
                 String Output = Result;
                 log[i] = "\n" + Output + " / " + cn.getCompany();
@@ -129,13 +129,14 @@ public class MainActivity extends Activity {
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
                 android.R.layout.two_line_list_item,
                 cursor,
-                new String[] {"Barcode", "Company"},
-                new int[] {android.R.id.text1, android.R.id.text2},
+                new String[]{"Barcode", "Company"},
+                new int[]{android.R.id.text1, android.R.id.text2},
                 0);
 
         listView.setAdapter(adapter);
         db.close();
     }
+
     public void showSoftKeyboard(View view) {
         if (view.requestFocus()) {
             InputMethodManager imm = (InputMethodManager)
@@ -143,6 +144,7 @@ public class MainActivity extends Activity {
             imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
         }
     }
+
     public String FilterFedex(String Number) {
         if (Number.length() == 34) {
             final String ScanFromFedEXE = Number.substring(Number.length() - 12, Number.length());
@@ -155,6 +157,7 @@ public class MainActivity extends Activity {
         }
         return Number;
     }
+
     public String FormatString(String Number) {
         if (Number.length() != 24) {
             String ScanFromFedEXE = Number.substring(0, 4) + " " + Number.substring(4, 8) + " " + Number.substring(8, 12);
@@ -166,16 +169,16 @@ public class MainActivity extends Activity {
             return Replace;
         }
     }
+
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
 
 
         if (resultCode == RESULT_OK) {
             final String scanContent = scanningResult.getContents();
-            String scanFormat = scanningResult.getFormatName();
-
-            formatTxt.setText("FORMAT: " + scanFormat);
-            contentTxt.setText("CONTENT: " + scanContent);
+            //  String scanFormat = scanningResult.getFormatName();
+            //  formatTxt.setText("FORMAT: " + scanFormat);
+            //  contentTxt.setText("CONTENT: " + scanContent);
 
             final SQLite db = new SQLite(this);
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
