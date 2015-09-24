@@ -30,7 +30,7 @@ public class SQLite extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " String,"
-                + KEY_Barcode + " String" + ")";
+                + KEY_Barcode + " TEXT" + ")";
         db.execSQL(CREATE_TABLE);
     }
 

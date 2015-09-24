@@ -45,4 +45,21 @@
         android:layout_alignBottom="@+id/scan_button"
         android:layout_alignParentEnd="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Count: "
+        android:id="@+id/textView"
+        android:layout_below="@+id/scan_button"
+        android:layout_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/scan_format"
+        android:layout_alignEnd="@+id/scan_button" />
+
 </RelativeLayout>
