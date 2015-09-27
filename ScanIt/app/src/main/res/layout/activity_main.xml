@@ -62,4 +62,14 @@
         android:layout_alignBottom="@+id/scan_format"
         android:layout_alignEnd="@+id/scan_button" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="By: Michael Jimenez"
+        android:id="@+id/textView3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/clr_button"
+        android:textSize="@dimen/abc_text_size_small_material" />
+
 </RelativeLayout>
