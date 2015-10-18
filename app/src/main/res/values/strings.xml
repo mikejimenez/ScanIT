@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Scan It</string>
+    <string name="scan">Scan</string>
+    <string name="send">Send</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_manual">
+        \n
+    Fedex Ground: XXXXXXX XXXXXXX XXXXXXX\n
+    Fedex:        XXXX XXXX XXXX\n
+    UPS:          XX XXX XXX XX XXXX XXXX\n
+   </string>
+    <string name="hint_data">Sender / Company Name</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Post\AndroidStudioProjects\ScanIt\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\Post\AndroidStudioProjects\ScanIt\app\build\intermediates\pre-dexed\debug\classes-837bca32cd508bd74ce00a1d8e7d5f881c31a323.jar" />
+    </item>
+    <item
+        jar="C:\Users\Post\AndroidStudioProjects\ScanIt\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Post\AndroidStudioProjects\ScanIt\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-3fa0473321cdf85db43b88e26e9fc69988ea21ae.jar" />
+    </item>
+    <item
+        jar="C:\Users\Post\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\Post\AndroidStudioProjects\ScanIt\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-8ff0629da5b734888f766de1a248c7a1cea06937.jar" />
+    </item>
+    <item
+        jar="C:\Users\Post\AndroidStudioProjects\ScanIt\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Users\Post\AndroidStudioProjects\ScanIt\app\build\intermediates\pre-dexed\debug\classes-95b9458f93648f71e59831375c24f94583f1c8b7.jar" />
+    </item>
+
+</items>
